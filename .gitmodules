@@ -1,0 +1,3 @@
+[submodule "collector"]
+	path = collector
+	url = git@github.com:icecrime/vossibility-collector.git

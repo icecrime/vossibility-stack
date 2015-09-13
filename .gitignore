@@ -1,0 +1,4 @@
+# Project specific files
+volumes/collector/config.toml
+volumes/collector/users.toml
+volumes/elasticsearch/
