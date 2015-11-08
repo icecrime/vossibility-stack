@@ -10,8 +10,8 @@ This repository provides a usable stack to get started using `docker-compose`.
 
  Repository | Description
  -----------|--------------------------------------------------------------------------------------
- [`vossibility-collector`](https://github.com/icecrime/vossibility-collector) | Core component of the project: collects GitHub data and stores to Elastic Search
- [`vossibility-bulletin`](https://github.com/icecrime/vossibility-bulletin)   | A tool to generate reports and newsletter from vossibility data *(work in progress)*
+ [`vossibility-collector`](https://github.com/icecrime/vossibility-collector) | Collect GitHub data and stores to Elastic Search
+ [`vossibility-bulletin`](https://github.com/icecrime/vossibility-bulletin)   | Generate reports from vossibility data *(work in progress)*
 
 ## Sample dashboard
 
