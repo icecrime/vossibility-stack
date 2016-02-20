@@ -20,6 +20,35 @@ ghollector:
     build: ./collector
     links:
         - elasticsearch
+        - lookupd
+        - nsqd
     volumes:
         - ./volumes/collector/:/config/
     command: --config /config/config.toml --debug
+
+lookupd:
+    image: nsqio/nsq
+    ports:
+        - 4160-4161
+    command: /nsqlookupd
+
+nsqd:
+    image: nsqio/nsq
+    links:
+        - lookupd
+    ports:
+        - 4150-4151
+    volumes:
+        - ./volumes/nsqd/:/data/
+    command: /nsqd --data-path=/data --lookupd-tcp-address=lookupd:4160
+
+logstash:
+    image: logstash
+    links:
+        - elasticsearch
+    ports:
+        - 5000:5000
+    volumes:
+        - ./volumes/logstash/:/etc/logstash/conf.d
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+
