@@ -15,4 +15,4 @@ This repository provides a usable stack to get started using `docker-compose`.
 
 ## Sample dashboard
 
-![Sample dashboard](https://github.com/icecrime/vossibility-collector/raw/master/resources/dashboard.png)
+![Sample dashboard](https://github.com/icecrime/vossibility-collector/raw/master/resources/screen_1.png)
